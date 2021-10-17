@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "spreads" => "spreads#cex"
+  get "spreads" => "spreads#shrimpy_all"
 end
