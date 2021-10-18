@@ -5,7 +5,7 @@ class SpreadsController < ApplicationController
     if response.success?
       # I want to map through my response and return only exchanges that have order books
       boo = JSON.parse(response.body)
-      boo[0]["orderBooks"].reject! { |book| book["orderBook"] == nil }
+      boo[0]["orderBooks"].reject! { |book| book["orderBook"].nil? }
       render json: boo
     else
       render json: { errors: JSON.parse(response.body) }, status: response.status
