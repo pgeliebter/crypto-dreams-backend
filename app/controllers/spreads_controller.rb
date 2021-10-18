@@ -1,6 +1,6 @@
 class SpreadsController < ApplicationController
   def shrimpy_all
-    query_params = { exchange: "all", limit: "1", baseSymbol: "BTC", quoteSymbol: "USD" }
+    query_params = { exchange: "all", limit: "1", baseSymbol: params[:base], quoteSymbol: "USD" }
     response = Faraday.get("https://dev-api.shrimpy.io/v1/orderbooks", query_params, "DEV-SHRIMPY-API-KEY": Rails.application.credentials.shrimpy[:api_key])
     if response.success?
       # I want to map through my response and return only exchanges that have order books
