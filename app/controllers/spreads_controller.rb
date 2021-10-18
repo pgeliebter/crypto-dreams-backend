@@ -4,7 +4,8 @@ class SpreadsController < ApplicationController
     response = Faraday.get("https://dev-api.shrimpy.io/v1/orderbooks", query_params, "DEV-SHRIMPY-API-KEY": Rails.application.credentials.shrimpy[:api_key])
     if response.success?
       # I want to map through my response and return only exchanges that have order books
-      boo = JSON.parse(response.body, symbolize_names: true)
+      boo = JSON.parse(response.body)
+      boo[0]["orderBooks"].reject! { |book| book["orderBook"] == nil }
       render json: boo
     else
       render json: { errors: JSON.parse(response.body) }, status: response.status
