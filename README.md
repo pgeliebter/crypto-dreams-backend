@@ -27,7 +27,8 @@ bundle install
 ```
 
 
-Optional: The next step is not strictly necessary as [Shrimpy](https://developers.shrimpy.io/docs/#introduction)'s API allows calls without authorization. But their are rate limits (10 calls / minute / IP address) when there is no authorization. This is only affects the `/spreads` route.    
+#### Optional: The next step is not strictly necessary as [Shrimpy](https://developers.shrimpy.io/docs/#introduction)'s API allows calls without authorization. But their are rate limits (10 calls / minute / IP address) when there is no authorization. This is only affects the `/spreads` route.
+  
 After that we need to update the Master key in order to unlock our API key for Shrimpy.  
 Open the project then navigate to the `/config` and add a new file called `master.key` copy and paste the secret key that has been provided for this project.   After that make sure that the Shrimpy key is visible after runnings:
 ```bash
