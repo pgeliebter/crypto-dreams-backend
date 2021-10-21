@@ -1,4 +1,11 @@
+# Crypto Dreams Backend
 
+## Welcome
+
+Thanks for checking out my project, I hope you enjoy!  
+This was built using Ruby on Rails
+
+-Pinny Geliebter
 
 ## Build Setup
 
