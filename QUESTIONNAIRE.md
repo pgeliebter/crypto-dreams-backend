@@ -17,6 +17,7 @@
 	 - Error handling for external APIs. So that includes retrying calls, error logging for failed call, and showing errors in the front end as well.
 	 - I would love to show the user a list of base and quote symbols to choose from that would be loaded from an external API. I would love to add more pages with more granular choices for looking at other pieces of information.
 	 - And adding the ability for a user to login and save some assets to watch for their own customized dashboard.
+	  - Lastly, I would like to dockerize the backend package so it can easily be run on any machine.
 
 
 Thanks again,
