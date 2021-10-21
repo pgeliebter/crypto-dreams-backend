@@ -27,8 +27,8 @@ bundle install
 ```
 
 
-#### Optional: The next step is not strictly necessary as [Shrimpy](https://developers.shrimpy.io/docs/#introduction)'s API allows calls without authorization. But their are rate limits (10 calls / minute / IP address) when there is no authorization. This is only affects the `/spreads` route.  After that we need to update the Master key in order to unlock our API key for Shrimpy.
-#### Open the project then navigate to the `/config` folder and add a new file called `master.key` copy and paste the secret key that has been provided for this project.   After that make sure that the Shrimpy key is visible after running:
+Optional: The next step is not strictly necessary as [Shrimpy](https://developers.shrimpy.io/docs/#introduction)'s API allows calls without authorization. But their are rate limits (10 calls / minute / IP address) when there is no authorization. This is only affects the `/spreads` route.
+#### Next we need to update the Master Key. Open the project then navigate to the `/config` folder and add a new file called `master.key` copy and paste the secret key that has been provided for this project.   After that make sure that the Shrimpy key is visible after running:
 ```bash
 rails credentials:edit
 ```
