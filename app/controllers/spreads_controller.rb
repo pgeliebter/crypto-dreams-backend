@@ -11,7 +11,11 @@ class SpreadsController < ApplicationController
       formatted_response[0]["orderBooks"].reject! { |book| book["orderBook"].blank? }
       render json: formatted_response
     else
-      render json: { errors: JSON.parse(response.body) }, status: response.status
+      if response.status == 429
+        render json: { message: "Please make sure the master key was added correctly.", errors: JSON.parse(response.body) }, status: response.status
+      else
+        render json: { errors: JSON.parse(response.body) }, status: response.status
+      end
     end
   end
 
