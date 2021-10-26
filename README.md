@@ -45,6 +45,19 @@ Lastly, in order to run our server:
 rails s
 ```
 
+## Routes
+
+```
+/spreads
+```
+This route returns data from the Shrimpy Developers API that contains bid and ask info for available exchanges.  Accepts query_params of `base=` and `quote=` for the base and quote symbol.  Example `/spreads?base=BTC&quote=USD`
+
+```
+/prices/market_chart
+/prices/current_price
+```
+These routes return data from CoinGecko with the past 7 day price history and current price respectively for Bitcoin.
+
 
 ## Live Version and Front End
 
