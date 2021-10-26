@@ -66,5 +66,4 @@ You can check out the front end for this project here:
 
   
 You can check out the hosted version of the project here:  
-[https://crypto-dreams.netlify.app](https://crypto-dreams.netlify.app)  
-[https://crypto-dreams-backend.heroku.com](https://crypto-dreams-backend.heroku.com)
+[https://crypto-dreams.netlify.app](https://crypto-dreams.netlify.app)
